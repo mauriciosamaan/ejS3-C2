@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing:border-box;
+        }
+
+        body {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            border: 1px solid #cdcdcd;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            padding:20px;
+            background: orange;
+            margin-top: 120px;
+        }
+
+        input {
+            padding: 10px;
+            transition: all .5s ease;
+            border: 3px solid #cdcdcd;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        input:focus {
+            outline:none;
+            box-shadow: 0 0 10px #cdcdcd;
+        }
+
+        input:disabled,
+        input:read-only {
+            background: #cbcbcb;
+        }
+
+        input:invalid:focus {
+            border-color: red;
+        }
+
+        input:valid {
+            border-color: green;
+        }
+
+        button { 
+            background-color: green;
+            padding: 10px;
+            color: white;
+            border: 1px solid green;
+            cursor: pointer;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <label>
+            Nombre: <input name="firstname" minlength="3" maxlength="15" type="text" placeholder="Nombre" required>
+        </label>
+        <br>
+        <br>
+        <label>
+            Apellido: <input name="lastname" minlength="3" maxlength="15" type="text" placeholder="Apellido" required>
+        </label>
+        <br>
+        <br>
+        <label>
+            Correo electrónico: <input name="email" type="email" placeholder="Email" required>
+        </label>
+        <br>
+        <br>
+        <label>
+            Edad: <input name="age" min="18" max="65" type="number" placeholder="Edad" required>
+        </label>
+        <br>
+        <br>
+            Género: 
+        <label>
+            <input type="radio" name="genero" value="masculino" required> Masculino
+        </label>
+        <label>
+            <input type="radio" name="genero" value="femenino" required> Femenino
+        </label>
+        <br>
+        <br>
+        <fieldset>
+            <legend>Hobbies</legend>
+            <p>
+                <label><input type="checkbox" name="sports">Deportes</label>
+                <br>
+                <label><input type="checkbox" name="music">Música</label>
+                <br>
+                <label><input type="checkbox" name="memeing">Memeing</label>
+                <br>
+                <label><input type="checkbox" name="greg">Greg</label>
+                <br>
+                (ah yes, the four hobbies)
+            </p>
+        </fieldset>
+        <br>
+        Elige tu país:
+        <br>
+        <select multiple name="categorias" required>
+            <option value="peru">Peru</option>
+            <option value="argentina">argentina</option>
+            <option value="chile">chile</option>
+            <option value="paraguay">Paraguay</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="Thaliand">Thighland</option>
+            <option value="Disneyland">Disneyland</option>
+            <option value="bottomtext">Bottomtext</option>
+        </select>
+        <br>
+        <br>
+        Deja un mensaje:
+        <br>
+        <textarea name="mensaje" required></textarea>
+        <br>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
